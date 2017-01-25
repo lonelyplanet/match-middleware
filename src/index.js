@@ -1,6 +1,6 @@
 import { match as reactRouterMatch } from "react-router";
 
-function match(routes) {
+export default function match(routes) {
   return (req, res, next) => {
     const request = req;
 
@@ -20,7 +20,3 @@ function match(routes) {
     });
   };
 }
-
-export {
-  match,
-};

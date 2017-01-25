@@ -1,6 +1,6 @@
 import React from "react";
 import { expect } from "chai";
-import { match } from "../src";
+import match from "../src";
 
 const App = ({ children }) => (<div className="app">{children}</div>);
 const Home = () => (<div><h1>Home</h1></div>)

@@ -1,15 +1,20 @@
-# babel-starter
-A starter kit for building a simple project with babel.
+# match-middleware
+An express middleware for working with React Router.
 
-### Build
-Will build to the `/dist` directory.
+### How to use it...
+```js
+import match from "match-middleware";
+import { renderToString } from "react-dom/server";
+import { RouterContext } from "react-router";
+import routes from "./routes";
 
-```shell
-npm run build
+router.get("/foo", match(routes), (req, res, next) => {
+  res.send(renderToString(<RouterContext {...req.props} />));
+});
 ```
 
-### Running tests
+### Run the tests...
 ```shell
 npm run test
-npm run test:ci # Runs in watch mode
+npm run test:ci # Watch mode
 ```
